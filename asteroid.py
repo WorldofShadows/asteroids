@@ -14,14 +14,15 @@ class Asteroid(CircleShape):
         self.image = pygame.Surface((radius * 2, radius * 2))  
         self.rect = self.image.get_rect(center=self.position)
         self.radius = radius
-        self.alive = True
+        #self.alive = True
         
     
     def draw(self, surface):
         pygame.draw.circle(surface, (200, 200, 200), self.rect.center, self.radius, 2)
 
-    def kill(self):
-        self.alive = False
+    #def kill(self):
+     #   self.alive = False
+      #  super().kill()  # Entfernt das Sprite aus allen Gruppen
     
     def split(self):
         self.kill()
